@@ -1,0 +1,96 @@
+/* this all selector selects everything every single element */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  /* background-image: url("NetflixBGImage.jpg"); */
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  align-items: center;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  width: 100vw;
+}
+/* logo styling */
+img {
+  box-sizing: border-box;
+  width: 10rem;
+}
+
+/* each li is set to inline block so that they don't appear on top of each other */
+header li {
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  width: 55rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 0 20px;
+  transition: all 0.3s 0s;
+}
+
+nav ul li {
+  font-weight: 700;
+}
+
+button {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 20px;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(90deg, #3183ab, #f37564);
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+}
+
+/* 3183AB blue
+F37564 pink*/
+
+.nav-links a {
+  box-sizing: border-box;
+  transition: all 0.3s 0s ease-in-out;
+}
+
+.nav-links li a:hover {
+  font-weight: bold;
+}
+
+header .nav-links .nav-active a {
+  font-weight: 900;
+  color: #3183ab;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+section .image-container,
+section .image-circle {
+  width: 40vw;
+}
