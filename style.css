@@ -19,16 +19,16 @@ F37564 pink*/
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
+  overflow-x: hidden;
   /* background-image: url("NetflixBGImage.jpg"); */
-  overflow: hidden;
 }
 
 li,
 a,
 button {
-  font-weight: 500;
-  font-size: 1.1rem;
-  color: rgb(0, 0, 0);
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(53, 53, 53);
   text-decoration: none;
 }
 
@@ -46,7 +46,7 @@ header {
   z-index: 100;
 }
 /* logo styling */
-img {
+.logo {
   box-sizing: border-box;
   height: 100%;
   margin-right: 3rem;
@@ -56,13 +56,6 @@ img {
 header li {
   display: inline-block;
   height: 100%;
-}
-
-nav {
-  display: flex;
-  width: 55rem;
-  justify-content: space-between;
-  align-items: center;
 }
 
 nav ul li {
@@ -110,16 +103,25 @@ header .nav-links .nav-active a {
   background-color: var(--grey);
   position: relative;
   height: 100vh;
+  z-index: 1;
 }
 .top-section .image-container {
   position: absolute;
+  height: 100vh;
   right: 0;
   width: 50%;
+  background-image: url(/images/frontpage-officemeeting-01.jpg);
+  background-position: center right;
+  /* background-color: #3183ab; */
 }
 .image-container img {
-  border-radius: 50%;
-  width: 100%;
-  transform: translate(20%, -10%);
+  /* border-radius: 50%; */
+  /* width: 720px;
+  height: 720px; */
+  width: 720px;
+  height: 720px;
+  transform-origin: center left;
+  /* transform: translate(100px, -80px); */
 }
 
 /* heading styling */
@@ -140,11 +142,12 @@ header .nav-links .nav-active a {
 }
 
 .heading-half .heading {
-  width: 25rem;
+  width: 75%;
   margin-top: 3.5rem;
+  transform-origin: center left;
 }
 .heading .main-heading {
-  line-height: 4rem;
+  line-height: 3.5rem;
   font-size: 3.5rem;
 }
 .heading .heading-bold {
@@ -168,4 +171,19 @@ header .nav-links .nav-active a {
 }
 .cta-heading:hover {
   box-shadow: 0px 6px 15px var(--blue);
+}
+
+/* story section */
+.our-story {
+  height: 70vh;
+  width: 100%;
+  background-color: #3183ab;
+}
+.story-graphic {
+  width: fit-content;
+  transform: translate(100%);
+}
+.story-graphic h2 {
+  transform: scale(400%);
+  transform-origin: center left;
 }
