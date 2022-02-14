@@ -1,4 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Outfit:wght@300&family=Poppins:wght@200;500&display=swap");
 /* this all selector selects everything every single element */
+/* 3183AB blue
+F37564 pink*/
+/* css variables */
+:root {
+  --blue: #3183ab;
+  --pink: #f37564;
+  --grey: #f9f9f9;
+  --darkgrey: #2c3333;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,13 +20,14 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
   /* background-image: url("NetflixBGImage.jpg"); */
+  overflow: hidden;
 }
 
 li,
 a,
 button {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
@@ -25,20 +37,25 @@ header {
   justify-content: space-between;
   padding: 10px 50px;
   align-items: center;
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(233, 233, 233, 0.6);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(8px);
   position: fixed;
   width: 100vw;
+  height: 50px;
+  z-index: 100;
 }
 /* logo styling */
 img {
   box-sizing: border-box;
-  width: 10rem;
+  height: 100%;
+  margin-right: 3rem;
 }
 
 /* each li is set to inline block so that they don't appear on top of each other */
 header li {
   display: inline-block;
+  height: 100%;
 }
 
 nav {
@@ -49,27 +66,28 @@ nav {
 }
 
 nav ul li {
+  font-weight: 700;
   padding: 0 20px;
   transition: all 0.3s 0s;
 }
 
-nav ul li {
-  font-weight: 700;
-}
-
-button {
+.cta button {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 12px 20px;
+  height: 100%;
   color: rgb(255, 255, 255);
-  background-image: linear-gradient(90deg, #3183ab, #f37564);
+  background-image: linear-gradient(90deg, var(--blue), var(--pink));
   outline: none;
   border: none;
   border-radius: 2rem;
+  transition: padding 0.1s ease-in-out;
 }
 
-/* 3183AB blue
-F37564 pink*/
+.cta button:hover {
+  padding: 12px 30px;
+  cursor: pointer;
+}
 
 .nav-links a {
   box-sizing: border-box;
@@ -78,6 +96,7 @@ F37564 pink*/
 
 .nav-links li a:hover {
   font-weight: bold;
+  color: #3183ab;
 }
 
 header .nav-links .nav-active a {
@@ -85,12 +104,68 @@ header .nav-links .nav-active a {
   color: #3183ab;
 }
 
-section {
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
+/* main heading and side image styling */
+/* image styling */
+.top-section {
+  background-color: var(--grey);
+  position: relative;
+  height: 100vh;
 }
-section .image-container,
-section .image-circle {
-  width: 40vw;
+.top-section .image-container {
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+.image-container img {
+  border-radius: 50%;
+  width: 100%;
+  transform: translate(20%, -10%);
+}
+
+/* heading styling */
+/* this is the entire half of the title page */
+.heading-half {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 6rem;
+  /* background-color: #f37564; */
+}
+/* the paragraph's margin is creating a space */
+.heading-half .intropara {
+  margin: 1.5rem 0;
+  font-size: 1.21rem;
+}
+
+.heading-half .heading {
+  width: 25rem;
+  margin-top: 3.5rem;
+}
+.heading .main-heading {
+  line-height: 4rem;
+  font-size: 3.5rem;
+}
+.heading .heading-bold {
+  background: linear-gradient(90deg, var(--blue), var(--pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+/* cta styling */
+.cta-heading {
+  background-color: var(--blue);
+  font-size: 1.3rem;
+  border: none;
+  padding: 1rem 1.5rem;
+  color: var(--grey);
+  border-radius: 1.2rem;
+  /* margin-top: 1.2rem; */
+  transition: all 0.3s ease;
+}
+.cta-heading:hover {
+  box-shadow: 0px 6px 15px var(--blue);
 }
