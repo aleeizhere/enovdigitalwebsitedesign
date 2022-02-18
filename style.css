@@ -43,7 +43,7 @@ header {
   position: fixed;
   width: 100vw;
   height: 50px;
-  z-index: 100;
+  z-index: 100; /*z index to keep the navbar in front always*/
 }
 /* logo styling */
 .logo {
@@ -58,10 +58,24 @@ header li {
   height: 100%;
 }
 
+/* nav just contains the li elements in between */
+
+nav {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
 nav ul li {
   font-weight: 700;
   padding: 0 20px;
   transition: all 0.3s 0s;
+}
+
+/* .cta is the cta button containers */
+.cta {
+  display: flex;
+  justify-content: center;
+  width: 12rem;
 }
 
 .cta button {
@@ -111,6 +125,7 @@ header .nav-links .nav-active a {
   right: 0;
   width: 50%;
   background-image: url(/images/frontpage-officemeeting-01.jpg);
+  background-repeat: no-repeat;
   background-position: center right;
   /* background-color: #3183ab; */
 }
@@ -165,7 +180,7 @@ header .nav-links .nav-active a {
   border: none;
   padding: 1rem 1.5rem;
   color: var(--grey);
-  border-radius: 1.2rem;
+  border-radius: 0.5rem;
   /* margin-top: 1.2rem; */
   transition: all 0.3s ease;
 }
@@ -174,16 +189,76 @@ header .nav-links .nav-active a {
 }
 
 /* story section */
+
 .our-story {
   height: 70vh;
   width: 100%;
-  background-color: #3183ab;
+  padding-left: 7rem;
+  display: flex;
+  align-items: center;
 }
 .story-graphic {
-  width: fit-content;
-  transform: translate(100%);
+  width: 40%;
+  height: fit-content;
+  /* border: 2px solid black; */
+  /* margin-left: 4rem; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.story-graphic h2 {
-  transform: scale(400%);
-  transform-origin: center left;
+.circle {
+  background-color: var(--pink);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+.circle h4 {
+  font-size: 2.2rem;
+  color: var(--grey);
+  font-weight: 300;
+}
+.circle-depth {
+  /* bottom: 10px;
+  left: 20px; */
+  width: 65px;
+  height: 65px;
+  background-color: #f375642d;
+  position: absolute;
+  z-index: 4;
+  top: -30px;
+  left: 60px;
+}
+.circle-sm {
+  width: 25px;
+  height: 25px;
+  top: 34%;
+  left: 105px;
+}
+
+.story-graphic h2{
+  font-weight: 500;
+  font-size: 7rem;
+  line-height: 5rem;
+}
+
+.our-story .company-intro{
+  width: 50%;
+  height: fit-content;
+}
+.company-intro p{
+  line-height: 1.8rem;
+}
+.company-intro .cta-heading{
+  margin-top: 2rem;
+  border-radius: 0.3rem;
+  padding: 0.8rem 1rem;
+  background-color: var(--pink);
+}
+.company-intro .cta-heading:hover {
+  box-shadow: 0px 6px 15px var(--pink);
 }
