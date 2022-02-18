@@ -294,8 +294,44 @@ header .nav-links .nav-active a {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1rem;
+  justify-items: center; /*aligning the items to the center of each grid fr*/
+  padding: 0 2rem;
 }
 .services-container .service {
   border: 1px solid red;
   padding: 1rem 2rem; /*Y X*/
+  width: 500px;
+}
+.service svg {
+  width: 4rem;
+}
+.service svg path {
+  fill: var(--pink);
+}
+.service .web-dev {
+  background-color: #3183ab;
+}
+.services-container .service {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background-image: linear-gradient(
+      rgba(108, 233, 255, 0.685),
+      rgba(72, 163, 248, 0.548)
+    ),
+    url(/images/websitelaptop.jpg);
+
+  background-size: cover;
+  border-radius: 2rem;
+}
+.service .service-head {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+  color: var(--grey);
+}
+.service .service-info {
+  color: var(--grey);
+  font-weight: 500;
+  line-height: 2rem;
 }
