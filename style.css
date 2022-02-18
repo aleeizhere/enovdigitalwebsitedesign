@@ -275,7 +275,7 @@ header .nav-links .nav-active a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 .services .section-heading {
   font-size: 3rem;
@@ -340,38 +340,48 @@ header .nav-links .nav-active a {
 }
 /* changing the background colors of the individual services boxes */
 .web-dev {
-  background: linear-gradient(-45deg, #4ee7ff85, #00ddff85),
-    url(/images/websitelaptop.jpg);
+  background: linear-gradient(-45deg, #0a1d2085, #03404985),
+    url(https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
+  background-position: 50% 50%;
 }
 .mob-dev {
   background: linear-gradient(-45deg, #3c034885, #d700ff85),
-    url(/images/websitelaptop.jpg);
+    url(https://images.pexels.com/photos/193003/pexels-photo-193003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
+  background-position: 50% 50%;
 }
 .video-anim {
   background: linear-gradient(-45deg, #00161085, #00fdb485),
-    url(/images/websitelaptop.jpg);
+    url(https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
+  background-position: 50% 50%;
 }
 .social-media {
   background: linear-gradient(-45deg, #190e0085, #ff880085),
-    url(/images/websitelaptop.jpg);
+    url(https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
+  background-position: 50% 50%;
 }
 .graphic-design {
   background: linear-gradient(-45deg, #00000085, #fc020285),
-    url(/images/websitelaptop.jpg);
+    url(https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
+  background-position: 50% 50%;
 }
 .branding {
   background: linear-gradient(-45deg, #00000085, #89920385),
-    url(/images/websitelaptop.jpg);
+    url(https://images.pexels.com/photos/7552373/pexels-photo-7552373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
+  background-position: 50% 50%;
 }
 
-/* changing the background colors of the individual services boxes ended*/
 .service:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(34, 34, 34, 0.514);
+}
+
+/* changing the background colors of the individual services boxes ended*/
+.testimonials {
+  height: 70vh;
 }
