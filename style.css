@@ -275,53 +275,56 @@ header .nav-links .nav-active a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 3rem;
 }
 .services .section-heading {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 3rem;
   margin-bottom: 0.5rem;
 }
 .services span {
-  background-color: black;
-  width: 100px;
-  height: 2px;
+  background-image: linear-gradient(90deg, var(--blue), var(--pink));
+  width: 8rem;
+  height: 0.3rem;
   border-radius: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
+/* services boxes */
 .services .services-container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 2rem;
   justify-items: center; /*aligning the items to the center of each grid fr*/
   padding: 0 2rem;
 }
+/* general boxes styling */
 .services-container .service {
-  border: 1px solid red;
-  padding: 1rem 2rem; /*Y X*/
-  width: 500px;
+  /* border: 1px solid red; */
+  padding: 5rem 2rem; /*Y X*/
+  width: 400px;
+  transition: transform 0.3s 0.1s ease, box-shadow 0.3s 0.1s ease;
+}
+.service .service-icon {
+  /* the icon is placed inside the div given it a specific height
+  and set the height of the actual svg to 100% to take the complete
+  height of it's container */
+  height: 70px;
 }
 .service svg {
-  width: 4rem;
+  width: 6rem;
+  height: 100%;
+  margin: auto auto; /*auto margin for centering*/
 }
 .service svg path {
-  fill: var(--pink);
+  fill: var(--grey);
 }
-.service .web-dev {
-  background-color: #3183ab;
-}
+
 .services-container .service {
   padding-top: 6rem;
   padding-bottom: 2rem;
-  background-image: linear-gradient(
-      rgba(108, 233, 255, 0.685),
-      rgba(72, 163, 248, 0.548)
-    ),
-    url(/images/websitelaptop.jpg);
-
-  background-size: cover;
   border-radius: 2rem;
 }
 .service .service-head {
@@ -334,4 +337,41 @@ header .nav-links .nav-active a {
   color: var(--grey);
   font-weight: 500;
   line-height: 2rem;
+}
+/* changing the background colors of the individual services boxes */
+.web-dev {
+  background: linear-gradient(-45deg, #4ee7ff85, #00ddff85),
+    url(/images/websitelaptop.jpg);
+  background-size: cover;
+}
+.mob-dev {
+  background: linear-gradient(-45deg, #3c034885, #d700ff85),
+    url(/images/websitelaptop.jpg);
+  background-size: cover;
+}
+.video-anim {
+  background: linear-gradient(-45deg, #00161085, #00fdb485),
+    url(/images/websitelaptop.jpg);
+  background-size: cover;
+}
+.social-media {
+  background: linear-gradient(-45deg, #190e0085, #ff880085),
+    url(/images/websitelaptop.jpg);
+  background-size: cover;
+}
+.graphic-design {
+  background: linear-gradient(-45deg, #00000085, #fc020285),
+    url(/images/websitelaptop.jpg);
+  background-size: cover;
+}
+.branding {
+  background: linear-gradient(-45deg, #00000085, #89920385),
+    url(/images/websitelaptop.jpg);
+  background-size: cover;
+}
+
+/* changing the background colors of the individual services boxes ended*/
+.service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(34, 34, 34, 0.514);
 }
