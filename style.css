@@ -268,3 +268,34 @@ header .nav-links .nav-active a {
 }
 
 /* story section end */
+
+/* services section */
+.services {
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services .section-heading {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+.services span {
+  background-color: black;
+  width: 100px;
+  height: 2px;
+  border-radius: 4rem;
+  margin-bottom: 1rem;
+}
+.services .services-container {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.services-container .service {
+  border: 1px solid red;
+  padding: 1rem 2rem; /*Y X*/
+}
