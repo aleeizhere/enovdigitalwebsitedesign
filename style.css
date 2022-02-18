@@ -202,7 +202,9 @@ header .nav-links .nav-active a {
   height: fit-content;
   /* border: 2px solid black; */
   /* margin-left: 4rem; */
-  position: relative; /*position is kept relative so that all the absolute positioning is done inside this bigger div*/
+  position: relative; /*position is kept relative so that all the absolute positioning is done
+  inside this bigger div, relative works when the parent element is kept relative and children
+  are kept absolute, sibling elements also work only parent*/
   display: flex;
   justify-content: center; /*the flex direction is column that's why to keep everything centered*/
   flex-direction: column;
