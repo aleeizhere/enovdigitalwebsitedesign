@@ -4,14 +4,14 @@ const testleft = document.getElementById("testleft");
 const testright = document.getElementById("testright");
 const testcontainer = document.getElementById("test-container");
 const containerarr = document.querySelectorAll(".container");
-
 //creating a function that will run on click left
 let testcounter = 1;
-let trns = 0;
+let trns = 770;
+let offsetanimate = containerarr[1].offsetWidth + 30;
 function animateright() {
   if (testcounter < containerarr.length - 1) {
     containerarr[testcounter].classList.remove("test-active");
-    trns -= 510;
+    trns -= offsetanimate;
     testcontainer.style.transform = `translateX(${trns}px)`;
     testcounter++;
     containerarr[testcounter].classList.add("test-active");
@@ -20,7 +20,7 @@ function animateright() {
 function animateleft() {
   if (testcounter > 0) {
     containerarr[testcounter].classList.remove("test-active");
-    trns += 510;
+    trns += offsetanimate;
     testcontainer.style.transform = `translateX(${trns}px)`;
     testcounter--;
     containerarr[testcounter].classList.add("test-active");

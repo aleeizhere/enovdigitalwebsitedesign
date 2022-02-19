@@ -398,11 +398,11 @@ header .nav-links .nav-active a {
   display: flex;
   /* border: 1px solid red; */
   margin-top: 2rem;
-  transition: transform 0.8s ease;
+  transition: transform 0.8s 0.3s ease;
+  transform: translateX(770px);
   z-index: 1;
 }
 /* .testimonial-container:active {
-  transform: translateX(510px);
 } */
 
 .testimonials .arrow {
@@ -473,7 +473,7 @@ header .nav-links .nav-active a {
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 .testimonial-container .test-active {
   transform: scale(1);
@@ -502,4 +502,9 @@ header .nav-links .nav-active a {
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: var(--grey);
+}
+/* testimonials styling ended */
+.footer{
+  height: 20vh;
+  background: linear-gradient(90deg, var(--blue), var(--pink));
 }
