@@ -304,7 +304,7 @@ header .nav-links .nav-active a {
 .services-container .service {
   /* border: 1px solid red; */
   padding: 5rem 2rem; /*Y X*/
-  width: 400px;
+  width: 90%;
   transition: transform 0.3s 0.1s ease, box-shadow 0.3s 0.1s ease;
 }
 .service .service-icon {
@@ -382,24 +382,88 @@ header .nav-links .nav-active a {
 }
 
 /* changing the background colors of the individual services boxes ended*/
+
+/* testimonials styling started */
 .testimonials {
   display: flex;
   align-items: center;
+  width: 100%;
+  /* border: 3px solid rgb(0, 162, 255); */
   flex-direction: column;
   padding-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
 }
 .testimonial-container {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 2rem;
-  transition: transform 0.3s 0.1s ease;
+  transition: transform 0.8s ease;
+  z-index: 1;
 }
-.testimonial-container:active {
-  transform: translateX(-510px);
+/* .testimonial-container:active {
+  transform: translateX(510px);
+} */
+
+.testimonials .arrow {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: var(--darkgrey);
+  box-shadow: 0 3px 10px #000;
+  position: absolute;
+  left: 3%;
+  right: 100;
+  top: 50%;
+  transform: translate(0%, -50%);
+  z-index: 6;
+  transition: all 0.1s ease;
 }
+.testimonials .arr-right {
+  left: 97%;
+  transform: translate(-100%, -50%);
+}
+.testimonials .arrow i {
+  color: #fff;
+  margin: 50% 50%;
+  transform: translate(-55%, -50%);
+  font-size: 2rem;
+}
+.testimonials .arr-right i {
+  transform: translate(-45%, -50%);
+}
+.testimonials .arrow:active {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.testimonials .vignette {
+  width: 20%;
+  height: 100%;
+  /* background-color: #000; */
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  background-image: linear-gradient(
+    90deg,
+    rgb(255, 255, 255, 0.575),
+    rgba(255, 255, 255, 0)
+  );
+}
+.testimonials .vig-right {
+  left: 100%;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    -90deg,
+    rgba(255, 255, 255, 0.575),
+    rgba(255, 255, 255, 0)
+  );
+}
+
 .testimonial-container .container {
   width: 30rem;
-  height: fit-content;
+  height: 28rem;
+  transform: scale(0.8);
   border-radius: 2rem;
   padding: 0.5rem 2rem;
   margin: 0 1rem;
@@ -409,6 +473,10 @@ header .nav-links .nav-active a {
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: transform 0.5s ease;
+}
+.testimonial-container .test-active {
+  transform: scale(1);
 }
 .container .client-image {
   background-image: url(/images/customertest-01.png);
