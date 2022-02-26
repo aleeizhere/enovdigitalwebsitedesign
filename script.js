@@ -1,3 +1,25 @@
+//redirecting to subpages
+const servicesboxes = document.querySelectorAll(".service");
+servicesboxes[0].addEventListener("click", () => {
+  location.href = "/index.html";
+});
+servicesboxes[1].addEventListener("click", () => {
+  location.href = "/index.html";
+});
+servicesboxes[2].addEventListener("click", () => {
+  location.href = "/index.html";
+});
+servicesboxes[3].addEventListener("click", () => {
+  location.href = "/index.html";
+});
+servicesboxes[4].addEventListener("click", () => {
+  location.href = "/index.html";
+});
+servicesboxes[5].addEventListener("click", () => {
+  location.href = "/index.html";
+});
+//redirecting to subpages
+
 //animating the testimonials
 
 const testleft = document.getElementById("testleft");
