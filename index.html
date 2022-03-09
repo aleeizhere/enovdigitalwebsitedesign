@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    
+
     <title>EnovDigital</title>
-    
+
 </head>
 
 <body>
@@ -24,9 +24,8 @@
                 <li><a href="#">Portfolio</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>Get a free Quote</button></a>
+        <a class="cta" id="get-quote" href="#"><button>Get a free Quote</button></a>
     </header>
-
     <section class="top-section">
         <div class="image-container">
             <!-- <img src="/images/frontpage-officemeeting-01.jpg" alt="image-container"> -->
@@ -304,7 +303,48 @@
                 </svg></a>
         </div>
     </section>
-    <script src="script.js"></script>
+    </div>
+    <div class="form-container">
+        <h2><span class="contact-bold">Contact</span> Us</h2>
+        <span id="response-message">Thanks for your response, we'll get back to you shortly.</span>
+        <span class="section-heading-underline"></span>
+        <form class="quote-form" action="">
+            <div class="form-info">
+                <label class="info-label" for="fname-input">First Name:</label> <input type="text" class="info-input"
+                    id="fname-input" required>
+            </div>
+            <div class="form-info">
+                <label class="info-label" for="lname-input">Last Name:</label> <input type="text" class="info-input"
+                    id="lname-input" required>
+            </div>
+            <div class="form-info">
+                <label class="info-label" for="email-input">Email:</label> <input type="email" class="info-input"
+                    id="email-input" required>
+            </div>
+            <div class="form-info">
+                <label class="info-label" for="phone-input">Phone:</label> <input type="tel" class="info-input"
+                    id="phone-input" required>
+            </div>
+            <div class="form-info">
+                <label class="info-label" for="service-input">Select Service:</label>
+                <select id="service-input" required>
+                    <option value="">Select your Project Type</option>
+                    <option value="1">Website Development</option>
+                    <option value="2">Android/iOS App Development</option>
+                    <option value="3">Branding</option>
+                    <option value="4">Graphic Designing</option>
+                    <option value="5">Video Animation</option>
+                    <option value="6">Social Media Marketing</option>
+                </select>
+            </div>
+            <div class="form-info">
+                <label class="info-label" for="message">Describe your project briefly:</label>
+                <textarea id="message" placeholder="Your project details..." required></textarea>
+            </div>
+            <input type="submit" class="form-btn" id="form-submit" value="Submit">
+            <input type="reset" class="form-btn" id="form-reset" value="Reset">
+        </form>
+        <script src="script.js"></script>
 </body>
 
 </html>

@@ -21,11 +21,11 @@ servicesboxes[5].addEventListener("click", () => {
 //redirecting to subpages
 
 //animating the testimonials
-
 const testleft = document.getElementById("testleft");
 const testright = document.getElementById("testright");
 const testcontainer = document.getElementById("test-container");
 const containerarr = document.querySelectorAll(".container");
+
 //creating a function that will run on click left
 let testcounter = 1;
 let trns = 770;
@@ -50,3 +50,17 @@ function animateleft() {
 }
 testright.addEventListener("click", animateright);
 testleft.addEventListener("click", animateleft);
+
+//form animation
+const quotebtn = document.querySelector("#get-quote");
+const formelm = document.querySelector(".form-container");
+const body = document.querySelector("section");
+const formsubmit = document.querySelector("#form-submit");
+const responsemsg = document.querySelector("#response-message");
+quotebtn.addEventListener("click", () => {
+  formelm.classList.add("form-container-show");
+});
+body.addEventListener("click",()=>{
+  formelm.classList.remove("form-container-show");
+})
+//form animation
