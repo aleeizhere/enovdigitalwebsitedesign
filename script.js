@@ -60,7 +60,15 @@ const responsemsg = document.querySelector("#response-message");
 quotebtn.addEventListener("click", () => {
   formelm.classList.add("form-container-show");
 });
-body.addEventListener("click",()=>{
+body.addEventListener("click", () => {
   formelm.classList.remove("form-container-show");
-})
+});
 //form animation
+
+// hamburger
+const hamburgericon = document.querySelector(".hamburger");
+const navitems = document.querySelector("nav");
+hamburgericon.addEventListener("click", () => {
+  navitems.classList.toggle("nav-active");
+});
+// hamburger
