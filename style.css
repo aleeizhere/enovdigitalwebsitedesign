@@ -59,11 +59,8 @@ header li {
 }
 
 /* nav just contains the li elements in between */
-
-nav {
-  width: fit-content;
+.nav-links {
   display: flex;
-  justify-content: center;
 }
 nav ul li {
   font-weight: 700;
@@ -138,7 +135,22 @@ header .nav-links .nav-active a {
   transform-origin: center left;
   /* transform: translate(100px, -80px); */
 }
-
+.hamburger {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+}
+.hamburger .bars {
+  height: 5px;
+  width: 100%;
+  background-color: var(--grey);
+  border-radius: 30rem;
+}
 /* heading styling */
 /* this is the entire half of the title page */
 .heading-half {
@@ -631,7 +643,7 @@ header .nav-links .nav-active a {
   font-size: 12px;
   margin: 0;
   padding: 0;
-  /* display: none; */
+  display: none;
 }
 .form-container h2 .contact-bold {
   background: linear-gradient(90deg, var(--blue), var(--pink));
@@ -690,3 +702,29 @@ header .nav-links .nav-active a {
   width: 34%;
 }
 /* Form Styling */
+
+/* tablet responsive */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    background-color: rgba(233, 233, 233, 0.6);
+    border-radius: 5rem;
+  }
+}
+/* tablet responsive */
