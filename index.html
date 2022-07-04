@@ -12,8 +12,9 @@
 </head>
 
 <body>
+
     <header>
-        <img class="logo" src="/images/enovdigitallogodesign-04.png" alt="logo" />
+        <img class="logo" src="./images/enovdigitallogodesign-04.png" alt="logo" />
         <nav>
             <ul class="nav-links">
                 <li class="nav-active"><a href="#">Home</a></li>
@@ -22,13 +23,14 @@
                 <li><a href="#">Portfolio</a></li>
             </ul>
         </nav>
-        <a class="cta" id="get-quote" href="#"><button>Get a free Quote</button></a>
+        <a class="cta" id="get-quote"><button>Get a free Quote</button></a>
         <a class="hamburger">
             <span class="bars"></span>
             <span class="bars"></span>
             <span class="bars"></span>
         </a>
     </header>
+    <div class="entire-body"></div>
     <section class="top-section">
         <div class="image-container">
             <!-- <img src="/images/frontpage-officemeeting-01.jpg" alt="image-container"> -->
@@ -307,26 +309,28 @@
         </div>
     </section>
     </div>
-    <div class="form-container">
+    <div class="form-container form-invisible">
         <h2><span class="contact-bold">Contact</span> Us</h2>
         <span id="response-message">Thanks for your response, we'll get back to you shortly.</span>
         <span class="section-heading-underline"></span>
         <form class="quote-form" action="">
-            <div class="form-info">
-                <label class="info-label" for="fname-input">First Name:</label> <input type="text" class="info-input"
-                    id="fname-input" required>
-            </div>
-            <div class="form-info">
-                <label class="info-label" for="lname-input">Last Name:</label> <input type="text" class="info-input"
-                    id="lname-input" required>
-            </div>
-            <div class="form-info">
-                <label class="info-label" for="email-input">Email:</label> <input type="email" class="info-input"
-                    id="email-input" required>
-            </div>
-            <div class="form-info">
-                <label class="info-label" for="phone-input">Phone:</label> <input type="tel" class="info-input"
-                    id="phone-input" required>
+            <div class="userpersonal">
+                <div class="form-info">
+                    <label class="info-label" for="fname-input">First Name:</label> <input type="text"
+                        class="info-input" id="fname-input" required>
+                </div>
+                <div class="form-info">
+                    <label class="info-label" for="lname-input">Last Name:</label> <input type="text" class="info-input"
+                        id="lname-input" required>
+                </div>
+                <div class="form-info">
+                    <label class="info-label" for="email-input">Email:</label> <input type="email" class="info-input"
+                        id="email-input" required>
+                </div>
+                <div class="form-info">
+                    <label class="info-label" for="phone-input">Phone:</label> <input type="tel" class="info-input"
+                        id="phone-input" required>
+                </div>
             </div>
             <div class="form-info">
                 <label class="info-label" for="service-input">Select Service:</label>
@@ -344,9 +348,12 @@
                 <label class="info-label" for="message">Describe your project briefly:</label>
                 <textarea id="message" placeholder="Your project details..." required></textarea>
             </div>
-            <input type="submit" class="form-btn" id="form-submit" value="Submit">
-            <input type="reset" class="form-btn" id="form-reset" value="Reset">
+            <div class="formbuttons">
+                <input type="submit" class="form-btn" id="form-submit" value="Submit">
+                <input type="reset" class="form-btn" id="form-reset" value="Reset">
+            </div>
         </form>
+
         <script src="script.js"></script>
 </body>
 

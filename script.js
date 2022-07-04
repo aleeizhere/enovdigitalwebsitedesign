@@ -30,6 +30,7 @@ const containerarr = document.querySelectorAll(".container");
 let testcounter = 1;
 let trns = 770;
 let offsetanimate = containerarr[1].offsetWidth + 30;
+
 function animateright() {
   if (testcounter < containerarr.length - 1) {
     containerarr[testcounter].classList.remove("test-active");
@@ -54,14 +55,28 @@ testleft.addEventListener("click", animateleft);
 //form animation
 const quotebtn = document.querySelector("#get-quote");
 const formelm = document.querySelector(".form-container");
-const body = document.querySelector("section");
+const body = document.querySelector(".entire-body");
 const formsubmit = document.querySelector("#form-submit");
 const responsemsg = document.querySelector("#response-message");
 quotebtn.addEventListener("click", () => {
-  formelm.classList.add("form-container-show");
+  formelm.classList.remove("form-invisible");
+  setTimeout(() => {
+    formelm.classList.add("form-container-show");
+  }, 100);
+  body.style.display = "flex";
+  setTimeout(() => {
+    body.classList.add("entire-body-active");
+  }, 100);
 });
 body.addEventListener("click", () => {
   formelm.classList.remove("form-container-show");
+  setTimeout(() => {
+    formelm.classList.add("form-invisible");
+  }, 400);
+  body.classList.remove("entire-body-active");
+  setTimeout(() => {
+    body.style.display = "none";
+  }, 500);
 });
 //form animation
 
