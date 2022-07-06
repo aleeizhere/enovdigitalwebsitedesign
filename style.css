@@ -534,7 +534,7 @@ header .nav-links .nav-active a {
   box-shadow: 0 10px 20px rgba(48, 48, 48, 0.486);
 }
 .container .client-image {
-  background-image: url(/imgxs/customertest-01.png);
+  background-image: url(./imgxs/customertest-01.png);
   background-size: cover;
   border: 6px solid #fff;
   width: 80px;
